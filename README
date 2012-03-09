@@ -1,0 +1,14 @@
+DKProtocol
+By: Lee Davis and Garrett Koller
+Project 1 of CS 321 with Dr. Stough
+
+The original goal of the project was to implement a simple transport layer
+protocol that would implement some basic features of TCP such as checksums,
+sliding window protocol, and security. To implement a transport layer protocol,
+it is necessary to use raw sockets, which use IP packets to connect and send
+information between different nodes. Raw sockets, however, require root access
+which was not known to the authors of DKP at the time. As a result, TCP sockets
+are used to make connections, and within the data field of a TCP packet is a
+checksum and sliding window information relevant to DKP.   Therefore, DKP acts
+more as a Session or Presentation layer protocol built that uses TCP rather than
+a transport layer.  Further, DKP does not provide any security features.
